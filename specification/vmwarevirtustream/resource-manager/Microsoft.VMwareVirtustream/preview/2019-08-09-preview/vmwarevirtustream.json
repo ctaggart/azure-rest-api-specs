@@ -991,6 +991,14 @@
           "type": "string",
           "readOnly": true
         },
+        "vcenterCertificateThumbprint": {
+          "type": "string",
+          "readOnly": true
+        },
+        "nsxtCertificateThumbprint": {
+          "type": "string",
+          "readOnly": true
+        },
         "provisioningNetwork": {
           "type": "string",
           "readOnly": true
