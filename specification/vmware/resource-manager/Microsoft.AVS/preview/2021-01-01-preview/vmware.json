@@ -962,18 +962,10 @@
             "$ref": "../../../../../common-types/resource-management/v1/types.json#/parameters/ResourceGroupNameParameter"
           },
           {
-            "name": "privateCloudName",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "The name of the private cloud."
+            "$ref": "#/parameters/privateCloudName"
           },
           {
-            "name": "clusterName",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "The name of the cluster."
+            "$ref": "#/parameters/clusterName"
           },
           {
             "$ref": "../../../../../common-types/resource-management/v1/types.json#/parameters/ApiVersionParameter"
@@ -1015,25 +1007,13 @@
             "$ref": "../../../../../common-types/resource-management/v1/types.json#/parameters/ResourceGroupNameParameter"
           },
           {
-            "name": "privateCloudName",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "The name of the private cloud."
+            "$ref": "#/parameters/privateCloudName"
           },
           {
-            "name": "clusterName",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "The name of the cluster."
+            "$ref": "#/parameters/clusterName"
           },
           {
-            "name": "datastoreName",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "The name of the datastore."
+            "$ref": "#/parameters/datastoreName"
           },
           {
             "$ref": "../../../../../common-types/resource-management/v1/types.json#/parameters/ApiVersionParameter"
@@ -1074,25 +1054,13 @@
             "$ref": "../../../../../common-types/resource-management/v1/types.json#/parameters/ResourceGroupNameParameter"
           },
           {
-            "name": "privateCloudName",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "The name of the private cloud."
+            "$ref": "#/parameters/privateCloudName"
           },
           {
-            "name": "clusterName",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "The name of the cluster."
+            "$ref": "#/parameters/clusterName"
           },
           {
-            "name": "datastoreName",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "The name of the datastore."
+            "$ref": "#/parameters/datastoreName"
           },
           {
             "$ref": "../../../../../common-types/resource-management/v1/types.json#/parameters/ApiVersionParameter"
@@ -1159,7 +1127,7 @@
             "description": "Accepted. The delete will complete asynchronously"
           },
           "204": {
-            "description": "No Content. No cluster to delete"
+            "description": "No Content. No datastore to delete"
           },
           "default": {
             "description": "Error response describing why the operation failed",
