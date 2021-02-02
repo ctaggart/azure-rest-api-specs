@@ -193,7 +193,7 @@
       "in": "path",
       "required": true,
       "type": "string",
-      "description": "Name of the addon for the private cloud",
+      "description": "Name of the add-on for the private cloud",
       "x-ms-parameter-location": "method"
     }
   },
@@ -343,7 +343,7 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Listed private clouds",
             "schema": {
               "$ref": "#/definitions/PrivateCloudList"
             }
@@ -382,7 +382,7 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Listed private clouds",
             "schema": {
               "$ref": "#/definitions/PrivateCloudList"
             }
@@ -424,7 +424,7 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Got a private cloud",
             "schema": {
               "$ref": "#/definitions/PrivateCloud"
             }
@@ -530,7 +530,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Updated the private cloud",
+            "description": "Updated a private cloud",
             "schema": {
               "$ref": "#/definitions/PrivateCloud"
             }
@@ -696,7 +696,7 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Listed clusters",
             "schema": {
               "$ref": "#/definitions/ClusterList"
             }
@@ -741,7 +741,7 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Got a cluster",
             "schema": {
               "$ref": "#/definitions/Cluster"
             }
@@ -949,7 +949,7 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Listed datastores",
             "schema": {
               "$ref": "#/definitions/DatastoreList"
             }
@@ -997,7 +997,7 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Got a datastore",
             "schema": {
               "$ref": "#/definitions/Datastore"
             }
@@ -1570,7 +1570,7 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Listed global reach connections",
             "schema": {
               "$ref": "#/definitions/GlobalReachConnectionList"
             }
@@ -1615,7 +1615,7 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Got a global reach connection",
             "schema": {
               "$ref": "#/definitions/GlobalReachConnection"
             }
@@ -1767,7 +1767,7 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Listed segments",
             "schema": {
               "$ref": "#/definitions/WorkloadNetworkSegmentsList"
             }
@@ -1924,13 +1924,10 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Updated a segment",
             "schema": {
               "$ref": "#/definitions/WorkloadNetworkSegment"
             }
-          },
-          "202": {
-            "description": "Accepted. The patch will complete asynchronously"
           },
           "default": {
             "description": "Error response describing why the operation failed",
@@ -1992,7 +1989,7 @@
     },
     "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/workloadNetworks/default/dhcpConfigurations": {
       "get": {
-        "operationId": "WorkloadNetworks_ListDhcpConfigurations",
+        "operationId": "WorkloadNetworks_ListDhcp",
         "x-ms-pageable": {
           "nextLinkName": "nextLink"
         },
@@ -2029,15 +2026,15 @@
           }
         },
         "x-ms-examples": {
-          "WorkloadNetworks_ListDhcpConfigurations": {
-            "$ref": "./examples/WorkloadNetworks_ListDhcpConfigurations.json"
+          "WorkloadNetworks_ListDhcp": {
+            "$ref": "./examples/WorkloadNetworks_List.json"
           }
         }
       }
     },
     "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/workloadNetworks/default/dhcpConfigurations/{dhcpId}": {
       "get": {
-        "operationId": "WorkloadNetworks_GetDhcpConfiguration",
+        "operationId": "WorkloadNetworks_GetDhcp",
         "tags": [
           "WorkloadNetworks"
         ],
@@ -2074,13 +2071,13 @@
           }
         },
         "x-ms-examples": {
-          "WorkloadNetworks_GetDhcpConfiguration": {
-            "$ref": "./examples/WorkloadNetworks_GetDhcpConfiguration.json"
+          "WorkloadNetworks_GetDhcp": {
+            "$ref": "./examples/WorkloadNetworks_GetDhcp.json"
           }
         }
       },
       "put": {
-        "operationId": "WorkloadNetworks_CreateOrUpdateDhcpConfiguration",
+        "operationId": "WorkloadNetworks_CreateOrUpdateDhcp",
         "x-ms-long-running-operation": true,
         "tags": [
           "WorkloadNetworks"
@@ -2133,13 +2130,13 @@
           }
         },
         "x-ms-examples": {
-          "WorkloadNetworks_CreateOrUpdateDhcpConfiguration": {
-            "$ref": "./examples/WorkloadNetworks_CreateOrUpdateDhcpConfiguration.json"
+          "WorkloadNetworks_CreateOrUpdateDhcp": {
+            "$ref": "./examples/WorkloadNetworks_CreateOrUpdateDhcp.json"
           }
         }
       },
       "patch": {
-        "operationId": "WorkloadNetworks_UpdateDhcpConfiguration",
+        "operationId": "WorkloadNetworks_UpdateDhcp",
         "x-ms-long-running-operation": true,
         "tags": [
           "WorkloadNetworks"
@@ -2178,9 +2175,6 @@
               "$ref": "#/definitions/WorkloadNetworkDhcp"
             }
           },
-          "202": {
-            "description": "Accepted. The patch will complete asynchronously"
-          },
           "default": {
             "description": "Error response describing why the operation failed",
             "schema": {
@@ -2189,13 +2183,13 @@
           }
         },
         "x-ms-examples": {
-          "WorkloadNetworks_UpdateDhcpConfiguration": {
-            "$ref": "./examples/WorkloadNetworks_UpdateDhcpConfiguration.json"
+          "WorkloadNetworks_UpdateDhcp": {
+            "$ref": "./examples/WorkloadNetworks_UpdateDhcp.json"
           }
         }
       },
       "delete": {
-        "operationId": "WorkloadNetworks_DeleteDhcpConfiguration",
+        "operationId": "WorkloadNetworks_DeleteDhcp",
         "x-ms-long-running-operation": true,
         "tags": [
           "WorkloadNetworks"
@@ -2220,7 +2214,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Deleted the DHCP configuration"
+            "description": "Deleted a DHCP configuration"
           },
           "204": {
             "description": "No DHCP configuration to delete"
@@ -2233,8 +2227,8 @@
           }
         },
         "x-ms-examples": {
-          "WorkloadNetworks_DeleteDhcpConfiguration": {
-            "$ref": "./examples/WorkloadNetworks_DeleteDhcpConfiguration.json"
+          "WorkloadNetworks_DeleteDhcp": {
+            "$ref": "./examples/WorkloadNetworks_DeleteDhcp.json"
           }
         }
       }
@@ -2310,7 +2304,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Got the gateway",
+            "description": "Got a gateway",
             "schema": {
               "$ref": "#/definitions/WorkloadNetworkGateway"
             }
@@ -2400,7 +2394,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Got the port mirroring profile",
+            "description": "Got a port mirroring profile",
             "schema": {
               "$ref": "#/definitions/WorkloadNetworkPortMirroring"
             }
@@ -2424,7 +2418,7 @@
         "tags": [
           "WorkloadNetworks"
         ],
-        "summary": "Create a port mirroring profile by id in a private cloud workload network.",
+        "summary": "Create or update a port mirroring profile by id in a private cloud workload network.",
         "parameters": [
           {
             "$ref": "../../../../../common-types/resource-management/v1/types.json#/parameters/SubscriptionIdParameter"
@@ -2453,13 +2447,13 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Updated a port mirroring profile",
             "schema": {
               "$ref": "#/definitions/WorkloadNetworkPortMirroring"
             }
           },
           "201": {
-            "description": "accepted operation",
+            "description": "Created a port mirroring profile",
             "schema": {
               "$ref": "#/definitions/WorkloadNetworkPortMirroring"
             }
@@ -2473,7 +2467,7 @@
         },
         "x-ms-examples": {
           "WorkloadNetworks_CreatePortMirroring": {
-            "$ref": "./examples/WorkloadNetworks_CreatePortMirroringProfiles.json"
+            "$ref": "./examples/WorkloadNetworks_CreateOrUpdatePortMirroringProfile.json"
           }
         }
       },
@@ -2512,13 +2506,10 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Updated a port mirroring profile",
             "schema": {
               "$ref": "#/definitions/WorkloadNetworkPortMirroring"
             }
-          },
-          "202": {
-            "description": "Accepted. The patch will complete asynchronously"
           },
           "default": {
             "description": "Error response describing why the operation failed",
@@ -2559,13 +2550,10 @@
         ],
         "responses": {
           "200": {
-            "description": "OK. The delete has succeeded"
-          },
-          "202": {
-            "description": "Accepted. The delete will complete asynchronously"
+            "description": "Deleted a port mirroring profile"
           },
           "204": {
-            "description": "No Content. No port mirroring profile to delete"
+            "description": "No port mirroring profile to delete"
           },
           "default": {
             "description": "Error response describing why the operation failed",
@@ -2607,7 +2595,7 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Listed VM groups",
             "schema": {
               "$ref": "#/definitions/WorkloadNetworkVMGroupsList"
             }
@@ -2808,7 +2796,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Deleted the VM group"
+            "description": "Deleted a VM group"
           },
           "204": {
             "description": "No VM group to delete"
@@ -2836,7 +2824,7 @@
         "tags": [
           "WorkloadNetworks"
         ],
-        "summary": "List of virtual machines in a private cloud workload network.",
+        "summary": "List virtual machines in a private cloud workload network",
         "parameters": [
           {
             "$ref": "../../../../../common-types/resource-management/v1/types.json#/parameters/SubscriptionIdParameter"
@@ -2853,7 +2841,7 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Listed virtual machines",
             "schema": {
               "$ref": "#/definitions/WorkloadNetworkVirtualMachinesList"
             }
@@ -2898,7 +2886,7 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Got a virtual machine",
             "schema": {
               "$ref": "#/definitions/WorkloadNetworkVirtualMachine"
             }
@@ -2926,7 +2914,7 @@
         "tags": [
           "WorkloadNetworks"
         ],
-        "summary": "List of DNS services in a private cloud workload network.",
+        "summary": "List DNS services in a private cloud workload network.",
         "parameters": [
           {
             "$ref": "../../../../../common-types/resource-management/v1/types.json#/parameters/SubscriptionIdParameter"
@@ -2943,7 +2931,7 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Listed DNS services",
             "schema": {
               "$ref": "#/definitions/WorkloadNetworkDnsServicesList"
             }
@@ -2988,7 +2976,7 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Got a DNS service",
             "schema": {
               "$ref": "#/definitions/WorkloadNetworkDnsService"
             }
@@ -3007,12 +2995,12 @@
         }
       },
       "put": {
-        "operationId": "WorkloadNetworks_CreateDnsService",
+        "operationId": "WorkloadNetworks_CreateOrUpdateDnsService",
         "x-ms-long-running-operation": true,
         "tags": [
           "WorkloadNetworks"
         ],
-        "summary": "Create a DNS service by id in a private cloud workload network.",
+        "summary": "Create or update a DNS service by id in a private cloud workload network",
         "parameters": [
           {
             "$ref": "../../../../../common-types/resource-management/v1/types.json#/parameters/SubscriptionIdParameter"
@@ -3041,13 +3029,13 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Updated a DNS service",
             "schema": {
               "$ref": "#/definitions/WorkloadNetworkDnsService"
             }
           },
           "201": {
-            "description": "accepted operation",
+            "description": "Created a DNS service",
             "schema": {
               "$ref": "#/definitions/WorkloadNetworkDnsService"
             }
@@ -3060,8 +3048,8 @@
           }
         },
         "x-ms-examples": {
-          "WorkloadNetworks_CreateDnsService": {
-            "$ref": "./examples/WorkloadNetworks_CreateDnsServices.json"
+          "WorkloadNetworks_CreateOrUpdateDnsService": {
+            "$ref": "./examples/WorkloadNetworks_CreateOrUpdateDnsService.json"
           }
         }
       },
@@ -3071,7 +3059,7 @@
         "tags": [
           "WorkloadNetworks"
         ],
-        "summary": "Create or update a DNS service by id in a private cloud workload network.",
+        "summary": "Update a DNS service by id in a private cloud workload network",
         "parameters": [
           {
             "$ref": "../../../../../common-types/resource-management/v1/types.json#/parameters/SubscriptionIdParameter"
@@ -3100,13 +3088,10 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Updated a DNS service",
             "schema": {
               "$ref": "#/definitions/WorkloadNetworkDnsService"
             }
-          },
-          "202": {
-            "description": "Accepted. The patch will complete asynchronously"
           },
           "default": {
             "description": "Error response describing why the operation failed",
@@ -3147,13 +3132,10 @@
         ],
         "responses": {
           "200": {
-            "description": "OK. The delete has succeeded"
-          },
-          "202": {
-            "description": "Accepted. The delete will complete asynchronously"
+            "description": "Deleted a DNS service"
           },
           "204": {
-            "description": "No Content. No VM group to delete"
+            "description": "No DNS service to delete"
           },
           "default": {
             "description": "Error response describing why the operation failed",
@@ -3164,7 +3146,7 @@
         },
         "x-ms-examples": {
           "WorkloadNetworks_DeleteDnsService": {
-            "$ref": "./examples/WorkloadNetworks_DeleteDnsServices.json"
+            "$ref": "./examples/WorkloadNetworks_DeleteDnsService.json"
           }
         }
       }
@@ -3178,7 +3160,7 @@
         "tags": [
           "WorkloadNetworks"
         ],
-        "summary": "List of DNS zones in a private cloud workload network.",
+        "summary": "List DNS zones in a private cloud workload network",
         "parameters": [
           {
             "$ref": "../../../../../common-types/resource-management/v1/types.json#/parameters/SubscriptionIdParameter"
@@ -3195,7 +3177,7 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Listed DNS zones",
             "schema": {
               "$ref": "#/definitions/WorkloadNetworkDnsZonesList"
             }
@@ -3240,7 +3222,7 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Got aDNS zone",
             "schema": {
               "$ref": "#/definitions/WorkloadNetworkDnsZone"
             }
@@ -3259,7 +3241,7 @@
         }
       },
       "put": {
-        "operationId": "WorkloadNetworks_CreateDnsZone",
+        "operationId": "WorkloadNetworks_CreateOrUpdateDnsZone",
         "x-ms-long-running-operation": true,
         "tags": [
           "WorkloadNetworks"
@@ -3293,13 +3275,13 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Updated a DNS zone",
             "schema": {
               "$ref": "#/definitions/WorkloadNetworkDnsZone"
             }
           },
           "201": {
-            "description": "accepted operation",
+            "description": "Created a DNS zone",
             "schema": {
               "$ref": "#/definitions/WorkloadNetworkDnsZone"
             }
@@ -3312,8 +3294,8 @@
           }
         },
         "x-ms-examples": {
-          "WorkloadNetworks_CreateDnsZone": {
-            "$ref": "./examples/WorkloadNetworks_CreateDnsZones.json"
+          "WorkloadNetworks_CreateOrUpdateDnsZone": {
+            "$ref": "./examples/WorkloadNetworks_CreateOrUpdateDnsZone.json"
           }
         }
       },
@@ -3323,7 +3305,7 @@
         "tags": [
           "WorkloadNetworks"
         ],
-        "summary": "Create or update a DNS zone by id in a private cloud workload network.",
+        "summary": "Update a DNS zone by id in a private cloud workload network",
         "parameters": [
           {
             "$ref": "../../../../../common-types/resource-management/v1/types.json#/parameters/SubscriptionIdParameter"
@@ -3352,13 +3334,10 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Updated a DNS zone",
             "schema": {
               "$ref": "#/definitions/WorkloadNetworkDnsZone"
             }
-          },
-          "202": {
-            "description": "Accepted. The patch will complete asynchronously"
           },
           "default": {
             "description": "Error response describing why the operation failed",
@@ -3379,7 +3358,7 @@
         "tags": [
           "WorkloadNetworks"
         ],
-        "summary": "Delete a DNS zone by id in a private cloud workload network.",
+        "summary": "Delete a DNS zone by id in a private cloud workload network",
         "parameters": [
           {
             "$ref": "../../../../../common-types/resource-management/v1/types.json#/parameters/SubscriptionIdParameter"
@@ -3399,13 +3378,10 @@
         ],
         "responses": {
           "200": {
-            "description": "OK. The delete has succeeded"
-          },
-          "202": {
-            "description": "Accepted. The delete will complete asynchronously"
+            "description": "Deleted DNS zone"
           },
           "204": {
-            "description": "No Content. No VM group to delete"
+            "description": "No DNS zone to delete"
           },
           "default": {
             "description": "Error response describing why the operation failed",
@@ -3416,7 +3392,7 @@
         },
         "x-ms-examples": {
           "WorkloadNetworks_DeleteDnsZone": {
-            "$ref": "./examples/WorkloadNetworks_DeleteDnsZones.json"
+            "$ref": "./examples/WorkloadNetworks_DeleteDnsZone.json"
           }
         }
       }
@@ -3430,7 +3406,7 @@
         "tags": [
           "Addons"
         ],
-        "summary": "List addons in a private cloud",
+        "summary": "List add-ons in a private cloud",
         "parameters": [
           {
             "$ref": "../../../../../common-types/resource-management/v1/types.json#/parameters/SubscriptionIdParameter"
@@ -3447,7 +3423,7 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Listed add-ons",
             "schema": {
               "$ref": "#/definitions/AddonList"
             }
@@ -3472,7 +3448,7 @@
         "tags": [
           "Addons"
         ],
-        "summary": "Get an addon by name in a private cloud",
+        "summary": "Get an add-on by name in a private cloud",
         "parameters": [
           {
             "$ref": "../../../../../common-types/resource-management/v1/types.json#/parameters/SubscriptionIdParameter"
@@ -3492,7 +3468,7 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Got an add-on",
             "schema": {
               "$ref": "#/definitions/Addon"
             }
@@ -3516,7 +3492,7 @@
         "tags": [
           "Addons"
         ],
-        "summary": "Create or update a addon in a private cloud",
+        "summary": "Create or update an add-on in a private cloud",
         "parameters": [
           {
             "$ref": "../../../../../common-types/resource-management/v1/types.json#/parameters/SubscriptionIdParameter"
@@ -3536,7 +3512,7 @@
           },
           {
             "name": "addon",
-            "description": "A addon in the private cloud",
+            "description": "An add-on in the private cloud",
             "in": "body",
             "required": true,
             "schema": {
@@ -3549,13 +3525,13 @@
         ],
         "responses": {
           "200": {
-            "description": "successful operation",
+            "description": "Updated an add-on",
             "schema": {
               "$ref": "#/definitions/Addon"
             }
           },
           "201": {
-            "description": "accepted operation",
+            "description": "Created an add-on",
             "schema": {
               "$ref": "#/definitions/Addon"
             }
@@ -3579,7 +3555,7 @@
         "tags": [
           "Addons"
         ],
-        "summary": "Delete a addon in a private cloud",
+        "summary": "Delete an add-on in a private cloud",
         "parameters": [
           {
             "$ref": "../../../../../common-types/resource-management/v1/types.json#/parameters/SubscriptionIdParameter"
@@ -3599,13 +3575,10 @@
         ],
         "responses": {
           "200": {
-            "description": "OK. The delete has succeeded"
-          },
-          "202": {
-            "description": "Accepted. The delete will complete asynchronously"
+            "description": "Deleted add-on"
           },
           "204": {
-            "description": "No Content. No addon to delete"
+            "description": "No add-on to delete"
           },
           "default": {
             "description": "Error response describing why the operation failed",
@@ -5383,7 +5356,7 @@
       }
     },
     "Addon": {
-      "description": "An addon resource",
+      "description": "An add-on resource",
       "allOf": [
         {
           "$ref": "#/definitions/Resource"
@@ -5391,34 +5364,34 @@
       ],
       "properties": {
         "properties": {
-          "description": "The properties of an addon resource",
+          "description": "The properties of an add-on resource",
           "$ref": "#/definitions/AddonProperties",
           "x-ms-client-flatten": true
         }
       }
     },
     "AddonUpdate": {
-      "description": "An update of an addon resource",
+      "description": "An update of an add-on resource",
       "properties": {
         "properties": {
-          "description": "The properties of an addon resource that may be updated",
+          "description": "The properties of an add-on resource that may be updated",
           "$ref": "#/definitions/AddonUpdateProperties",
           "x-ms-client-flatten": true
         }
       }
     },
     "AddonUpdateProperties": {
-      "description": "The properties of an addon that may be updated",
+      "description": "The properties of an add-on that may be updated",
       "properties": {
         "properties": {
-          "description": "reference specific properties definition for addon type being used",
+          "description": "reference specific properties definition for add-on type being used",
           "$ref": "#/definitions/AddonProperties",
           "x-ms-client-flatten": true
         }
       }
     },
     "AddonProperties": {
-      "description": "The properties of an addon that may be updated",
+      "description": "The properties of an add-on that may be updated",
       "allOf": [
         {
           "$ref": "#/definitions/AddonSrmProperties"
@@ -5426,7 +5399,7 @@
       ],
       "properties": {
         "addonType": {
-          "description": "The type of private cloud addon",
+          "description": "The type of private cloud add-on",
           "type": "string",
           "enum": [
             "SRM",
@@ -5438,7 +5411,7 @@
           }
         },
         "provisioningState": {
-          "description": "The state of the addon provisioning",
+          "description": "The state of the add-on provisioning",
           "type": "string",
           "readOnly": true,
           "enum": [
@@ -5456,7 +5429,7 @@
       }
     },
     "AddonSrmProperties": {
-      "description": "The properties of an SRM addon that may be updated",
+      "description": "The properties of an SRM add-on that may be updated",
       "properties": {
         "licenseKey": {
           "description": "The SRM license",
@@ -5465,7 +5438,7 @@
       }
     },
     "AddonList": {
-      "description": "A paged list of addons",
+      "description": "A paged list of add-ons",
       "properties": {
         "value": {
           "description": "The items on a page",

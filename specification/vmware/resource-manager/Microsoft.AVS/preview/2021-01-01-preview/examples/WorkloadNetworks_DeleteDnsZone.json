@@ -4,11 +4,10 @@
     "subscriptionId": "{subscription-id}",
     "resourceGroupName": "group1",
     "privateCloudName": "cloud1",
-    "dnsServiceId": "dnsService1"
+    "dnsZoneId": "dnsZone1"
   },
   "responses": {
     "200": {},
-    "202": {},
     "204": {}
   }
 }

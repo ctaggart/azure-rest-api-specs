@@ -29,7 +29,6 @@
         },
         "type": "Microsoft.AVS/privateClouds/workloadNetworks/portMirroringProfiles"
       }
-    },
-    "202": {}
+    }
   }
 }

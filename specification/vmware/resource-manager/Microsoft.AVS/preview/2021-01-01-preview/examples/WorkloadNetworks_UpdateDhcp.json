@@ -32,7 +32,6 @@
         },
         "type": "Microsoft.AVS/privateClouds/workloadNetworks/dhcpConfigurations"
       }
-    },
-    "202": {}
+    }
   }
 }

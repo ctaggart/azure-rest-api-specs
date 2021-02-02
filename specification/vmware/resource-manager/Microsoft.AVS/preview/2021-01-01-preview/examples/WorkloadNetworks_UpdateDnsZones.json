@@ -34,7 +34,6 @@
         },
         "type": "Microsoft.AVS/privateClouds/workloadNetworks/dnsZones"
       }
-    },
-    "202": {}
+    }
   }
 }

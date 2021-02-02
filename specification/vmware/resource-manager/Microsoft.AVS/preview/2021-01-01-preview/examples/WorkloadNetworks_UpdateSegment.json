@@ -42,7 +42,6 @@
         },
         "type": "Microsoft.AVS/privateClouds/workloadNetworks/segments"
       }
-    },
-    "202": {}
+    }
   }
 }
