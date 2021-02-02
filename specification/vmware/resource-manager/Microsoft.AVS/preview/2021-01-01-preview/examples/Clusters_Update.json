@@ -31,20 +31,6 @@
         },
         "type": "Microsoft.AVS/privateClouds/clusters"
       }
-    },
-    "201": {
-      "body": {
-        "id": "/subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/clusters/cluster1",
-        "name": "cluster1",
-        "sku": {
-          "name": "AV20"
-        },
-        "properties": {
-          "clusterSize": 4,
-          "provisioningState": "Updating"
-        },
-        "type": "Microsoft.AVS/privateClouds/clusters"
-      }
     }
   }
 }

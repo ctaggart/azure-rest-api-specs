@@ -16,16 +16,6 @@
     }
   },
   "responses": {
-    "200": {
-      "body": {
-        "id": "/subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/clusters/cluster1/datastores/datastore1",
-        "name": "datastore1",
-        "properties": {
-          "provisioningState": "Succeeded"
-        },
-        "type": "Microsoft.AVS/privateClouds/clusters/datastores"
-      }
-    },
     "201": {
       "body": {
         "id": "/subscriptions/{subscription-id}/resourceGroups/group1/providers/Microsoft.AVS/privateClouds/cloud1/clusters/cluster1/datastores/datastore1",
