@@ -571,10 +571,10 @@
         ],
         "responses": {
           "200": {
-            "description": "OK. The delete has succeeded"
+            "description": "Private cloud deleted"
           },
           "204": {
-            "description": "No Content. No private cloud to delete"
+            "description": "No private cloud to delete"
           },
           "default": {
             "description": "Error response describing why the operation failed",
@@ -901,10 +901,10 @@
         ],
         "responses": {
           "200": {
-            "description": "OK. Cluster deleted"
+            "description": "Cluster deleted"
           },
           "204": {
-            "description": "No Content. No cluster to delete"
+            "description": "No cluster to delete"
           },
           "default": {
             "description": "Error response describing why the operation failed",
